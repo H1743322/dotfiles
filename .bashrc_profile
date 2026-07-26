@@ -1,0 +1,25 @@
+#fzf
+source /usr/share/doc/fzf/examples/key-bindings.bash
+
+alias f='cd "$(
+    {
+        find ~/work -mindepth 0 -maxdepth 1 -type d;
+        find ~/projects -mindepth 0 -maxdepth 1 -type d;
+        find ~/programs -mindepth 0 -maxdepth 1 -type d;
+        find ~/.config -mindepth 0 -maxdepth 1 -type d;
+    } | fzf
+)"'
+
+bind '"\C-f":"tmux-sessionizer\n"'
+
+alias fd='fdfind'
+alias py='python3'
+
+bind 'set completion-ignore-case on'
+
+if [[ $TMUX ]]; then
+    alias clear='clear && tmux clear-history'
+fi
+
+export EDITOR=nvim
+
