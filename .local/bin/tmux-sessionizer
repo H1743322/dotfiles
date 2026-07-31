@@ -10,6 +10,7 @@ else
             find ~/.config -mindepth 0 -maxdepth 1 -type d; \
             find ~/notes -mindepth 0 -maxdepth 1 -type d; \
             find ~/programs -mindepth 0 -maxdepth 1 -type d; \
+            find ~/dotfiles -mindepth 0 -maxdepth 0 -type d; \
         }  | fzf \
     )
 fi
