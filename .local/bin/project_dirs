@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+{
+    [[ -d ~/work ]] && find ~/work -mindepth 1 -maxdepth 2 -type d
+    [[ -d ~/projects ]] && find ~/projects -mindepth 0 -maxdepth 1 -type d
+    [[ -d ~/.config ]] && find ~/.config -mindepth 0 -maxdepth 1 -type d
+    [[ -d ~/notes ]] && find ~/notes -mindepth 0 -maxdepth 1 -type d
+    [[ -d ~/programs ]] && find ~/programs -mindepth 0 -maxdepth 1 -type d
+    [[ -d ~/dotfiles ]] && find ~/dotfiles -mindepth 0 -maxdepth 1 -name .git -prune -o -type d -print
+}
