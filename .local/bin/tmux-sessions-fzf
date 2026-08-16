@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-current=$(tmux display-message -p '#S')
-
 selected=$(tmux list-sessions -F '#{session_name}' \
-    | grep -v "^${current}\$" \
-    | fzf --header "switch session (current: ${current})")
+    | fzf )
 
 if [[ -z $selected ]]; then
     exit 0

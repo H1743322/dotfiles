@@ -1,4 +1,6 @@
 # Dotfiles
 
-stow
+```sh
+stow .
+```
 
