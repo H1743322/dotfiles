@@ -4,6 +4,7 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 alias f='cd "$(project_dirs | fzf)"'
 
 bind '"\C-f":"tmux-sessionizer\n"'
+bind '"\C-g":"tmux-sessions-fzf\n"'
 
 alias fd='fdfind'
 alias py='python3'
