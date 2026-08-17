@@ -6,5 +6,5 @@
     [[ -d ~/.config ]] && find ~/.config -mindepth 0 -maxdepth 1 -type d
     [[ -d ~/notes ]] && find ~/notes -mindepth 0 -maxdepth 1 -type d
     [[ -d ~/programs ]] && find ~/programs -mindepth 0 -maxdepth 1 -type d
-    [[ -d ~/dotfiles ]] && find ~/dotfiles -mindepth 0 -maxdepth 1 -name .git -prune -o -type d -print
+    [[ -d ~/dotfiles ]] && find ~/dotfiles -mindepth 0 -maxdepth 3 -name .git -prune -o -type d -print
 }
